@@ -6,17 +6,72 @@ h1{
     text-align: center;
 }
 
+h2{
+    text-align: center;
+}
+
 h3{
     text-align: center;
 }
 
-#nav li{
-    display: inline;
-    align-content: center;
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-#pieprin{
+#asideprin{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: justify; 
+}
+
+#artprin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify; 
+}
+
+.pie{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
     background-color: red;
+}
+
+/*contacto*/
+
+#artcont{
+    display: flex;
+    flex-direction: column;
+}
+
+#formcont{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    padding-right: 40%;
+}
+
+#alineado{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-star;
+    padding-left: 40%;
+}
+
+#asidecont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left:10%;
+}
+
+.iframe-fluid{
+    padding-top: 20%;
+    padding-bottom: 10%;
+    padding-left: 20;
 }
