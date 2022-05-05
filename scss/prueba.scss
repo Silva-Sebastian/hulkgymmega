@@ -1,0 +1,22 @@
+.pruscss{
+    font-size: 20px;
+
+    img{
+        width: 50%;
+    }
+}
+
+#artprin{
+    p{
+        color: brown;
+    }
+}
+
+.lema{
+    li{
+        font-weight: bold;
+        &:hover{
+            font-size: 20px;
+        }
+    }
+}
