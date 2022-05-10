@@ -16,7 +16,66 @@
     li{
         font-weight: bold;
         &:hover{
-            font-size: 20px;
+            font-size: 23px;
+            color: rgb(216, 214, 214);
         }
     }
+}
+
+$decide:(
+    "registrate": rgb(8, 241, 39),
+    "cancela": rgb(151, 8, 8)
+);
+
+@each $name, $color in $decide {
+    .btn-#{$name}{
+        background-color:$color;
+    }
+}
+
+//map get
+$estilo:(
+    letra: white,
+    centro: center,
+    fondo: black,
+);
+
+.detalle{
+    background-color: map-get($estilo, fondo);
+    color: map-get($estilo, letra);
+} 
+
+//mixin
+
+@mixin logito($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+.log{
+    display: flex;
+    justify-content: center;
+    @include logito(100%, 10%)
+}
+
+//extend
+
+.qhace {
+    border: 1px solid black;
+    width: 100px;
+    height: 50px;
+}
+
+.btn-enviar{
+    @extend .qhace;
+    background-color: rgb(8, 221, 8);
+    color: black;
+    border-radius: 15px
+}
+
+.btn-reset{
+    @extend .qhace;
+    background-color: rgb(153, 12, 12);
+    color: black;
+    border-radius: 15px
 }
