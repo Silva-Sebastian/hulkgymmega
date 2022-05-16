@@ -1,49 +1,25 @@
-.pruscss{
-    font-size: 20px;
+//codigo en comun//
 
-    img{
-        width: 50%;
+body{
+    background-image: linear-gradient(rgb(87, 82, 82), rgb(2, 66, 6));
+}
+
+@for $i from 1 through 5 {
+    h#{$i}{
+        text-align: center;
+        font-size: 500% / $i;
     }
 }
 
-#artprin{
-    p{
-        color: brown;
-    }
+p{
+    font-weight: bold;
 }
 
-.lema{
-    li{
-        font-weight: bold;
-        &:hover{
-            font-size: 23px;
-            color: rgb(216, 214, 214);
-        }
-    }
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-
-$decide:(
-    "registrate": rgb(8, 241, 39),
-    "cancela": rgb(151, 8, 8)
-);
-
-@each $name, $color in $decide {
-    .btn-#{$name}{
-        background-color:$color;
-    }
-}
-
-//map get
-$estilo:(
-    letra: white,
-    centro: center,
-    fondo: black,
-);
-
-.detalle{
-    background-color: map-get($estilo, fondo);
-    color: map-get($estilo, letra);
-} 
 
 //mixin
 
@@ -58,24 +34,168 @@ $estilo:(
     @include logito(100%, 10%)
 }
 
+.pie{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size:large;
+    margin-top: 5%;
+}
+
+//index//
+
+#artprin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    height: 80%;
+    p{
+        color: rgb(44, 38, 38);
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bolder;
+    }
+}
+
+.lema{
+    li{
+        font-weight: bold;
+        &:hover{
+            font-size: 23px;
+            color: rgb(83, 52, 52);
+        }
+    }
+}
+
+#asideprin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    height: 80%;
+    p{
+        font-weight: bolder;
+    }
+}
+
+//map get
+$estilo:(
+    letra: rgb(22, 21, 21),
+    centro: center,
+    fondo: rgba(26, 71, 21, 0.5),
+);
+
+.detalle{
+    background-color: map-get($estilo, fondo);
+    color: map-get($estilo, letra);
+}
+
+//contacto
+
+#artcont{
+    display: flex;
+    flex-direction: column;
+}
+
+#formcont{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    padding-right: 40%;
+}
+
+#alineado{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding-left: 40%;
+}
+
+#asidecont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left:10%;
+}
+
+.iframe-fluid{
+    padding-top: 20%;
+    padding-bottom: 10%;
+    padding-left: 20;
+}
+
 //extend
 
-.qhace {
+.dec {
     border: 1px solid black;
     width: 100px;
     height: 50px;
 }
 
 .btn-enviar{
-    @extend .qhace;
-    background-color: rgb(8, 221, 8);
+    @extend .dec;
+    background-color: rgb(1, 102, 94);
     color: black;
     border-radius: 15px
 }
 
 .btn-reset{
-    @extend .qhace;
-    background-color: rgb(153, 12, 12);
+    @extend .dec;
+    background-color: rgb(59, 1, 1);
     color: black;
     border-radius: 15px
 }
+
+//clases
+.card-body{
+    background-image: linear-gradient(rgb(22, 21, 21), rgb(1, 46, 1));
+    h5{
+        color: black
+    };
+    p{
+        color: rgb(12, 3, 3);
+    };
+}
+
+.card-img-top{
+    height: 500px;
+}
+
+//registro
+#gen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.x{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30%;
+}
+.y{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2% 20%;
+}
+
+$decide:(
+    "registrate": rgb(24, 70, 100),
+    "cancela": rgb(151, 8, 8)
+);
+
+@each $name, $color in $decide {
+    .btn-#{$name}{
+        background-color:$color;
+    }
+}
+
+
+
+
+

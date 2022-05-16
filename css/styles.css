@@ -28,6 +28,16 @@ h3{
     padding: 2% 0%;
 }
 
+.pie{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size:large;
+    margin-top: 5%;
+}
+
 #asideprin{
     display: flex;
     flex-direction: column;
@@ -42,16 +52,6 @@ h3{
     justify-content: center;
     text-align: justify;
     height: 80%;
-}
-
-.pie{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    font-weight: bolder;
-    font-size:large;
-    margin-top: 5%;
 }
 
 /*contacto*/
