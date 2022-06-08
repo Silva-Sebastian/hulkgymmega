@@ -1,11 +1,19 @@
 //codigo en comun//
 
 body{
-    background-image: linear-gradient(rgb(87, 82, 82), rgb(2, 66, 6));
+    background-image: linear-gradient(rgb(6, 15, 3), rgb(25, 124, 25));
 }
 
-@for $i from 1 through 5 {
+h1{
+    color: rgb(204, 199, 192);
+    text-align: center;
+    font-size: 500%;
+    font-family:fantasy;
+}
+
+@for $i from 2 through 5 {
     h#{$i}{
+        color: rgb(204, 199, 192);
         text-align: center;
         font-size: 500% / $i;
     }
@@ -13,12 +21,29 @@ body{
 
 p{
     font-weight: bold;
+    color: rgb(204, 199, 192);
+}
+
+li{
+    color: rgb(204, 199, 192);
+}
+
+label{
+    color: rgb(204, 199, 192);
 }
 
 .navbar{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
 }
 
 //mixin
@@ -38,10 +63,11 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    text-align: center;
+    flex-wrap: nowrap;
     font-weight: bolder;
     font-size:large;
     margin-top: 5%;
+    color: black;
 }
 
 //index//
@@ -53,7 +79,6 @@ p{
     text-align: justify;
     height: 80%;
     p{
-        color: rgb(44, 38, 38);
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: bolder;
     }
@@ -61,10 +86,12 @@ p{
 
 .lema{
     li{
+        color: rgb(204, 199, 192);
         font-weight: bold;
+        font-family:cursive;
         &:hover{
             font-size: 23px;
-            color: rgb(83, 52, 52);
+            color: rgb(233, 129, 129);
         }
     }
 }
@@ -97,39 +124,55 @@ $estilo:(
 #artcont{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 20px;
 }
 
 #formcont{
     display: flex;
     flex-direction: column;
-    align-items:flex-end;
-    padding-right: 40%;
+    justify-content:center;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding-left: 5;
 }
 
 #alineado{
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
-    padding-left: 40%;
+    align-items:center;
 }
 
 #asidecont{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-left:10%;
+  
+    border: 3px solid black;
+    border-radius: 20px;
 }
 
 .iframe-fluid{
-    padding-top: 20%;
+    padding-top: 5%;
     padding-bottom: 10%;
-    padding-left: 20;
 }
 
 //extend
 
+.d-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0% 2% 10%
+}
+
 .dec {
-    border: 1px solid black;
+    border: 3px solid black;
     width: 100px;
     height: 50px;
 }
@@ -137,13 +180,15 @@ $estilo:(
 .btn-enviar{
     @extend .dec;
     background-color: rgb(1, 102, 94);
+    font-weight: bold;
     color: black;
     border-radius: 15px
 }
 
 .btn-reset{
     @extend .dec;
-    background-color: rgb(59, 1, 1);
+    background-color: rgb(156, 0, 0);
+    font-weight: bold;
     color: black;
     border-radius: 15px
 }
@@ -160,10 +205,17 @@ $estilo:(
 }
 
 .card-img-top{
+    width: 90%;
     height: 500px;
+    margin: 0% 5%;
 }
 
 //registro
+#reg{
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
 #gen{
     display: flex;
     flex-direction: column;
